@@ -1,0 +1,15 @@
+*.js.map
+*.mocks.*
+*.test.d.ts
+*.test.js
+*.test.ts
+*.tgz
+.eslintrc.js
+.gitattributes
+.github
+.junk
+.nyc_output
+.prettierignore
+.vscode
+coverage
+utils

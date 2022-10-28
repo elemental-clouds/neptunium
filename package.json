@@ -1,0 +1,77 @@
+{
+  "author": "lstatro",
+  "bugs": {
+    "url": "https://github.com/elemental-clouds/neptunium/issues"
+  },
+  "dependencies": {
+    "@aws-sdk/client-ec2": "^3.198.0",
+    "@elemental-clouds/carbon": "^0.0.0",
+    "@elemental-clouds/hydrogen": "^0.0.8"
+  },
+  "description": "",
+  "devDependencies": {
+    "@types/node": "^18.11.3",
+    "@typescript-eslint/eslint-plugin": "^5.37.0",
+    "eslint": "^8.23.1",
+    "prettier": "^2.6.2"
+  },
+  "eslintConfig": {
+    "env": {
+      "es2021": true,
+      "node": true
+    },
+    "extends": [
+      "eslint:recommended",
+      "plugin:@typescript-eslint/recommended"
+    ],
+    "ignorePatterns": [
+      "build/**/*"
+    ],
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+      "ecmaVersion": 12,
+      "sourceType": "module"
+    },
+    "plugins": [
+      "@typescript-eslint"
+    ],
+    "rules": {
+      "indent": [
+        "error",
+        2
+      ],
+      "linebreak-style": [
+        "error",
+        "unix"
+      ],
+      "quotes": [
+        "error",
+        "single"
+      ],
+      "semi": [
+        "error",
+        "always"
+      ]
+    }
+  },
+  "homepage": "https://github.com/lstatro/neptunium#readme",
+  "keywords": [],
+  "license": "MIT",
+  "main": "index.js",
+  "name": "@elemental-clouds/neptunium",
+  "prettier": {
+    "arrowParens": "avoid",
+    "singleQuote": true,
+    "tabWidth": 2
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/elemental-clouds/neptunium.git"
+  },
+  "scripts": {
+    "build": "rm -rf ./build && tsc && cp package.json ./build && cp ./README.md ./build && cp ./.npmignore ./build",
+    "format": "npx prettier --check ./",
+    "lint": "eslint . --ext .ts"
+  },
+  "version": "0.0.0"
+}
