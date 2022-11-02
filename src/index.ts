@@ -1,11 +1,13 @@
+import {
+  AWSRegionName,
+  CredentialedClassArgs,
+} from '@elemental-clouds/hydrogen/Common';
 import { DescribeRegionsCommand, EC2Client } from '@aws-sdk/client-ec2';
 
-import { AWSRegionName } from '@elemental-clouds/hydrogen/Common';
 import { Credentialed } from '@elemental-clouds/carbon';
 import assert from 'assert';
 
-interface RegionalClass {
-  defaultRegion: string;
+interface RegionalClass extends CredentialedClassArgs {
   global?: boolean;
 }
 
@@ -20,9 +22,9 @@ export class Regions extends Credentialed {
   protected global;
 
   constructor(args: RegionalClass) {
-    super();
+    super(args);
 
-    this.region = args.defaultRegion;
+    this.region = args.region;
     this.global = args.global || false;
   }
 
